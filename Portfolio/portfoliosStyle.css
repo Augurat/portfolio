@@ -1,0 +1,110 @@
+﻿body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.nav-bar 
+{
+    position: fixed;
+    height: 100vh;
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: stretch;
+    gap: 5%;
+}
+
+.nav-item
+{
+    flex-grow: 1;
+    writing-mode: sideways-lr;
+    text-align: center;
+    font-family: "BBH Bogle", Tahoma, sans-serif;
+    font-size: calc(1rem + 6vh);
+    background-color: mediumseagreen;
+    border-radius: 0 15% 15% 0;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:hover
+{
+    background-color: seagreen;
+    cursor: pointer;
+    flex-grow: 2;
+}
+
+.nav-item.active
+{
+    flex-grow: 4;
+    background-color: #74479e;
+}
+
+.gallery 
+{
+    grid-column: 1;
+    grid-row: 1;
+    width: 95vw;
+    height: auto;
+    display: flex;
+    margin-left: 5vw;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.gallery-item
+{
+    height: 40vh;
+    width: auto;
+    margin: 2%;
+}
+
+.overlap-grid
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+.popup-box
+{
+    grid-column: 1;
+    grid-row: 1;
+    width: 90vw;
+    height: 90vh;
+    background-color: rebeccapurple;
+    display: block;
+    place-self: center;
+    border: 3px solid white;
+    border-radius: 2vw;
+}
+
+.popup-box.inactive
+{
+    display: none;
+}
+
+.popup-content 
+{
+    font-family: "Big Shoulders", Tahoma, sans-serif;
+    font-size: calc(1rem + max(2vh, 2vw));
+    padding: 5%;
+    margin: 0;
+}
+
+.popup-content.inactive
+{
+    display: none;
+}
+
+.in-popup-link
+{
+    color: lawngreen;
+}

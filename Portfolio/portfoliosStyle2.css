@@ -1,0 +1,140 @@
+﻿body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    position: fixed;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: stretch;
+    gap: 5%;
+}
+
+.nav-item {
+    flex-grow: 1;
+    writing-mode: sideways-lr;
+    text-align: center;
+    font-family: "BBH Bogle", Tahoma, sans-serif;
+    font-size: calc(1rem + min(6vh, 6vw));
+    background-color: mediumseagreen;
+    border-radius: 0 15% 15% 0;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: seagreen;
+    cursor: pointer;
+    flex-grow: 2;
+    font-size: calc(2rem + min(6vh, 6vw));
+}
+
+.nav-item.active {
+    flex-grow: 4;
+    background-color: #74479e;
+}
+
+.gallery
+{
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin-left: 10%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.gallery-item
+{
+    height: 40vh;
+    margin: min(1vh, 1vw);
+    width: fit-content;
+    object-fit: contain;
+}
+
+.gallery2
+{
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin-left: 10%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.gallery2-nested-flex
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+
+.gallery2-nested-flex-item {
+    width: min(40vh, 60vw);
+    height: min(40vh, 60vw);
+    object-fit: contain;
+    font-family: "Space Grotesk", 'Courier New', monospace;
+    color: white;
+    text-wrap: balance;
+    font-size: calc(4px + min(2vh, 4vw));
+    padding: 2%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.gallery2-nested-flex-item.wide
+{
+    width: 80vh;
+}
+
+.gallery2-nested-flex-item a
+{
+    color: lawngreen;
+}
+
+.small-heading {
+    font-family: "Playfair Display", Garamond, serif;
+    color: white;
+    text-wrap: balance;
+    width: fit-content;
+    display: inline;
+    font-weight: bold;
+    font-size: calc(1rem + min(2vh, 4vw));
+    line-height: 1.8;
+}
+
+@keyframes screenTransition {
+    from {
+        transform: translate(0%, 0%);
+        opacity: 100%;
+    }
+
+    to {
+        transform: translate(-50%, 0%);
+        opacity: 0%;
+    }
+}
+
+.screen-transition-animator {
+    animation: screenTransition 0.5s ease-in 1;
+    animation-fill-mode: forwards;
+}
